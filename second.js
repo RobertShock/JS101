@@ -15,17 +15,21 @@ console.log("length of quote", numberOfCharacters);
 // charAt()
 // .replace()
 
-console.log (quote.indexOf("things"));
+console.log(quote.indexOf("things"));
 // points to the first character of the "defined" word.  Will give the index of the beginning of the string (first encounter)
 
-console.log (quote.charAt(50));
+console.log(quote.charAt(0));
 // will give the character at the specified index.
 
-console.log (quote.replace("things", "robots"));
+console.log(quote.replace("things", "robots"));
 // replaces "things" only the first time in the quote.
-console.log (quote.replace(/things/g, "robots"));
+var quote = quote.replace(/things/g, "robots");
 // replaces all "things" within the quote.
+document.getElementById("quote").innerHTML = quote;
+
 
 var element = document.getElementById("secondQuote");
+// reading from HTML
 var jsString = element.innerHTML;
 console.log(jsString);
+
